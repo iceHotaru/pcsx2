@@ -491,16 +491,12 @@ void PADDialog::OnButtonClicked(wxCommandEvent& event)
 	else if (bt_id == JoyL_config)
 	{ // If the button ID is equals to the JoyL_config button ID
 		JoystickConfiguration joystick_config(gamepad_id, true, this);
-
-		joystick_config.InitJoystickConfiguration();
-		joystick_config.ShowModal();
+		joystick_config.Run();
 	}
 	else if (bt_id == JoyR_config)
 	{ // If the button ID is equals to the JoyR_config button ID
 		JoystickConfiguration joystick_config(gamepad_id, false, this);
-
-		joystick_config.InitJoystickConfiguration();
-		joystick_config.ShowModal();
+		joystick_config.Run();
 	}
 	else if (bt_id == Set_all)
 	{ // If the button ID is equals to the Set_all button ID
